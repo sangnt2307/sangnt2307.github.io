@@ -1,0 +1,136 @@
+// MAIN CONTAINER
+.main {
+  // background-color: red;
+  > *:not(:first-child) {
+    margin-bottom: 14rem;
+  }
+}
+
+// ILLUSTRATION
+.main-illus {
+  // background-color: red;
+  width: 65%;
+  margin-top: -30px;
+  opacity: 0.6;
+  transition: opacity 700ms ease-in-out;
+  animation: illus-opac 2s ease-in-out infinite, illus-move 200s linear infinite;
+  animation-play-state: running;
+
+  @keyframes illus-opac {
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+  @keyframes illus-move {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// INTRO1
+.main-intro1 {
+  gap: 2rem;
+
+  .icon-arrow-right {
+    background-image: url(../../static/icon/arrow-right.svg);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 1rem;
+  }
+}
+#intro1-main-title {
+  width: 500px;
+  text-align: center;
+}
+
+// INTRO2
+.main-intro2 {
+  width: 600px;
+  > * {
+    margin-bottom: 2rem;
+  }
+}
+
+// BENEFITS
+.main-benefits {
+  width: 100%;
+
+  .cards {
+    // already flexbox
+    margin-top: 4rem;
+    gap: 6rem 7rem;
+    flex-wrap: wrap;
+    &-item {
+      width: 320px;
+    }
+    &-title {
+      font-family: montserrat-bold;
+      font-size: $fz-22;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// EXPLORE
+.explore {
+  .cards2 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 346px));
+    grid-gap: 4rem 1rem;
+    justify-content: space-between;
+
+    // CARD2 STYLE
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 350px;
+      background-color: $primary-mid;
+      border-radius: 8px;
+      box-shadow: 0.5rem 0.5rem 24px #000;
+
+      // Wrapper for 2 text blocks
+      &-text-container {
+        padding: 1rem 2rem;
+      }
+    }
+
+    &-title {
+      font-family: montserrat-bold;
+      font-size: $fz-22;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &-svg {
+    }
+  }
+}
+
+#cards2-svg-1 {
+  @include cards2-svg(1);
+}
+#cards2-svg-2 {
+  @include cards2-svg(2);
+}
+#cards2-svg-3 {
+  @include cards2-svg(3);
+}
+#cards2-svg-4 {
+  @include cards2-svg(4);
+}
+#cards2-svg-5 {
+  @include cards2-svg(5);
+}

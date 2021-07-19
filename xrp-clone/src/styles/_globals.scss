@@ -1,0 +1,171 @@
+// Font Family
+@font-face {
+  font-family: montserrat;
+  src: url(../../static/font/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: montserrat-light;
+  src: url(../../static/font/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: montserrat-bold;
+  src: url(../../static/font/Montserrat-Bold.ttf);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat, sans-serif;
+  font-size: $fz-16;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  color: $white;
+  background-color: $primary-dark;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: inherit;
+}
+// Paragraph
+p {
+  margin: 0;
+}
+// Buttons
+.button {
+  color: $white;
+  background-color: $primary;
+  font-family: montserrat-bold;
+  font-size: $fz-14;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+}
+
+// Fixed
+.fixed {
+  display: fixed;
+  top: 0;
+  left: 0;
+}
+
+// Padding
+.padding {
+  &-x-16 {
+    @include padding-x(1rem); //16px
+  }
+  &-x-32 {
+    @include padding-x(2rem); //32px
+  }
+  &-x-48 {
+    @include padding-x(3rem); //48px
+  }
+  &-x-64 {
+    @include padding-x(4rem); //64px
+  }
+  &-x-128 {
+    @include padding-x(8rem); //128px
+  }
+}
+// Margin
+.margin {
+  &-t-16 {
+    margin-top: 1rem; //16px
+  }
+  &-t-24 {
+    margin-top: 1.5rem; //24px
+  }
+  &-t-32 {
+    margin-top: 2rem; //32px
+  }
+  &-t-48 {
+    margin-top: 3rem; //48px
+  }
+  &-t-56 {
+    margin-top: 3.5rem; //56px
+  }
+  &-t-64 {
+    margin-top: 4rem; //64px
+  }
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-x {
+    flex-direction: row;
+  }
+
+  &-y {
+    flex-direction: column;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Grid
+.grid {
+  display: grid;
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoints-down(medium) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
+
+// TYPOGRAPHY
+// TITLE
+.title {
+  font-family: montserrat-bold;
+  color: $white;
+  &-0 {
+    font-size: $fz-56;
+    line-height: 1.2;
+  }
+  &-1 {
+    font-size: $fz-32;
+    line-height: 1.3;
+  }
+  &-2 {
+    font-size: $fz-22;
+    font-family: montserrat;
+  }
+  &-colored {
+    color: rgba($color: #00ffaa, $alpha: 1);
+  }
+}
+
+// TEXT
+.text {
+  font-size: $fz-14;
+}
