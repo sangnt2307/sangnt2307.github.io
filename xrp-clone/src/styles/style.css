@@ -406,8 +406,7 @@ p {
   margin-bottom: 14rem;
 }
 
-.main-illus {
-  width: 65%;
+.main-illusss {
   margin-top: 50px;
   opacity: 0.6;
   -webkit-transition: opacity 700ms ease-in-out;
@@ -416,6 +415,19 @@ p {
           animation: illus-opac 2s ease-in-out infinite, illus-move 200s linear infinite;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  width: 1000px;
+  height: 680px;
+  background-image: url(../../static/img/main-illus.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  pointer-events: none;
 }
 
 @-webkit-keyframes illus-opac {
@@ -808,6 +820,7 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .bg-illus-01 {
