@@ -1,5 +1,12 @@
 .header {
-  margin-top: 1rem;
+  background-color: $primary-dark;
+  // background-color: transparent;
+  // background-color: red;
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  position: fixed;
+  z-index: 3000;
   .nav {
     width: 100%;
 
@@ -7,8 +14,8 @@
     &__logo {
       display: inline-block;
       background-image: url(../../static/img/logo.svg);
-      background-repeat: no-repeat;
-      background-position: center;
+      // background-repeat: no-repeat;
+      // background-position: center;
       background-size: contain;
       width: 270.666667px; //406px
       height: 48px; //64px

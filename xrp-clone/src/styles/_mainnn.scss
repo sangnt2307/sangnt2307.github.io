@@ -10,7 +10,7 @@
 .main-illus {
   // background-color: red;
   width: 65%;
-  margin-top: -30px;
+  margin-top: 50px;
   opacity: 0.6;
   transition: opacity 700ms ease-in-out;
   animation: illus-opac 2s ease-in-out infinite, illus-move 200s linear infinite;
@@ -40,14 +40,6 @@
 // INTRO1
 .main-intro1 {
   gap: 2rem;
-
-  .icon-arrow-right {
-    background-image: url(../../static/icon/arrow-right.svg);
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 1rem;
-  }
 }
 #intro1-main-title {
   width: 500px;
@@ -85,10 +77,12 @@
 
 // EXPLORE
 .explore {
+  width: 100%;
+
   .cards2 {
     display: grid;
     grid-template-columns: repeat(3, minmax(auto, 346px));
-    grid-gap: 4rem 1rem;
+    grid-gap: 4.5rem 1rem;
     justify-content: space-between;
 
     // CARD2 STYLE
@@ -100,10 +94,14 @@
       background-color: $primary-mid;
       border-radius: 8px;
       box-shadow: 0.5rem 0.5rem 24px #000;
+      transition: transform 250ms ease;
 
       // Wrapper for 2 text blocks
       &-text-container {
-        padding: 1rem 2rem;
+        padding: 2rem 2rem;
+      }
+      &:hover {
+        transform: translateY(-24px);
       }
     }
 
@@ -114,8 +112,8 @@
       margin-bottom: 1.5rem;
     }
 
-    &-svg {
-    }
+    // &-svg {
+    // }
   }
 }
 
@@ -133,4 +131,19 @@
 }
 #cards2-svg-5 {
   @include cards2-svg(5);
+}
+#cards2-svg-6 {
+  @include cards2-svg(6);
+}
+#cards2-svg-7 {
+  @include cards2-svg(7);
+}
+#cards2-svg-8 {
+  @include cards2-svg(8);
+}
+#cards2-svg-9 {
+  @include cards2-svg(9);
+}
+#cards2-svg-10 {
+  @include cards2-svg(10);
 }

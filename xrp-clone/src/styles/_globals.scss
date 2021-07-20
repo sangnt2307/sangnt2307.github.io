@@ -1,15 +1,15 @@
 // Font Family
 @font-face {
   font-family: montserrat;
-  src: url(../../static/font/Montserrat-Regular.ttf);
+  src: url(/static/font/Montserrat-Regular.ttf);
 }
 @font-face {
   font-family: montserrat-light;
-  src: url(../../static/font/Montserrat-Light.ttf);
+  src: url(/static/font/Montserrat-Light.ttf);
 }
 @font-face {
   font-family: montserrat-bold;
-  src: url(../../static/font/Montserrat-Bold.ttf);
+  src: url(/static/font/Montserrat-Bold.ttf);
 }
 
 html {
@@ -40,18 +40,72 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.link-with-arrow {
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: color 150ms ease;
+  &::after {
+    content: "";
+    margin-left: 0.25rem;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../static/icon/link-arrow.svg);
+    background-size: contain;
+    background-position: center;
+    background-position-y: 1px;
+    background-repeat: no-repeat;
+    transition: transform 150ms ease;
+  }
+  &:hover {
+    color: $primary-light;
+  }
+  &:hover::after {
+    transform: translateX(2px) translateY(-2px);
+  }
+}
+// List
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding: 0;
+  list-style: none;
+}
 // Paragraph
 p {
   margin: 0;
 }
 // Buttons
 .button {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
   color: $white;
-  background-color: $primary;
+  background-color: rgba($color: $primary, $alpha: 1);
   font-family: montserrat-bold;
   font-size: $fz-14;
   padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
+  transition: background-color 200ms ease;
+  z-index: 1000;
+
+  .icon-arrow-right {
+    background-image: url(../../static/icon/arrow-right.svg);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 1rem;
+    transition: transform 200ms ease;
+  }
+
+  &:hover {
+    background-color: rgba($color: $primary, $alpha: 0.8);
+    > .icon-arrow-right {
+      transform: translateX(4px);
+    }
+  }
 }
 
 // Fixed
@@ -161,11 +215,23 @@ p {
     font-family: montserrat;
   }
   &-colored {
-    color: rgba($color: #00ffaa, $alpha: 1);
+    color: rgba($color: $secondary, $alpha: 1);
+    &-bigger {
+      font-size: $fz-24;
+    }
   }
 }
 
 // TEXT
 .text {
   font-size: $fz-14;
+  line-height: 1.618;
+
+  &-link {
+    font-family: montserrat-bold;
+    color: $primary-light;
+  }
+}
+.mini-text {
+  font-size: 0.5rem;
 }

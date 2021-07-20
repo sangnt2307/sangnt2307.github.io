@@ -1,0 +1,47 @@
+.big-card {
+  position: relative;
+  width: 700px;
+  background-color: red;
+  background-color: $primary-mid;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 8px 8px 16px 1px transparent;
+  transition: all 300ms ease;
+  transition-property: transform, box-shadow;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    > :not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-illus {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 113px;
+  }
+  #big-card-illus-01 {
+    top: 0;
+    background-position: left;
+    background-image: url(../../static/img/big-card-svg-1.svg);
+  }
+  #big-card-illus-02 {
+    bottom: 0;
+    background-position: right;
+    background-image: url(../../static/img/big-card-svg-2.svg);
+  }
+
+  // Card Hover
+  &:hover {
+    transform: translateY(-8px) translateX(8px);
+    box-shadow: -8px 8px 16px 8px rgba($color: #000000, $alpha: 0.5);
+  }
+}

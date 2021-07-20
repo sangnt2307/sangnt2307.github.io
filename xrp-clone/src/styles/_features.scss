@@ -1,0 +1,28 @@
+.features {
+  // background-color: red;
+  width: 100%;
+
+  &-container {
+    display: flex;
+    flex-wrap: no-wrap;
+    gap: 2rem 5rem;
+  }
+  &-item {
+    // width: 300px;
+    &-title {
+      font-family: montserrat-bold;
+      font-size: $fz-22;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1.25rem;
+    color: $secondary;
+    font-size: $fz-14;
+    font-family: montserrat-bold;
+    background-color: rgb(9, 65, 32);
+  }
+}
