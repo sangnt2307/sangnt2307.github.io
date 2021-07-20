@@ -1,0 +1,25 @@
+.bg-illus {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &-01 {
+    width: 289px;
+    height: 743px;
+    top: 720px;
+    background-image: url(../../static/img/artwork-01.png);
+  }
+  &-02 {
+    width: 289px;
+    height: 743px;
+    top: 1150px;
+    right: 0;
+    background-image: url(../../static/img/artwork-02.png);
+  }
+  &-03 {
+    width: 289px;
+    height: 743px;
+    top: 800px;
+    background-image: url(../../static/img/artwork-01.png);
+  }
+}

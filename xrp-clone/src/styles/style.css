@@ -1,16 +1,16 @@
 @font-face {
   font-family: montserrat;
-  src: url(/static/font/Montserrat-Regular.ttf);
+  src: url(../../static/font/Montserrat-Regular.ttf);
 }
 
 @font-face {
   font-family: montserrat-light;
-  src: url(/static/font/Montserrat-Light.ttf);
+  src: url(../../static/font/Montserrat-Light.ttf);
 }
 
 @font-face {
   font-family: montserrat-bold;
-  src: url(/static/font/Montserrat-Bold.ttf);
+  src: url(../../static/font/Montserrat-Bold.ttf);
 }
 
 html {
@@ -801,5 +801,34 @@ p {
 
 .footer-end .footer-logo:hover {
   opacity: 0.8;
+}
+
+.bg-illus {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-illus-01 {
+  width: 289px;
+  height: 743px;
+  top: 720px;
+  background-image: url(../../static/img/artwork-01.png);
+}
+
+.bg-illus-02 {
+  width: 289px;
+  height: 743px;
+  top: 1150px;
+  right: 0;
+  background-image: url(../../static/img/artwork-02.png);
+}
+
+.bg-illus-03 {
+  width: 289px;
+  height: 743px;
+  top: 800px;
+  background-image: url(../../static/img/artwork-01.png);
 }
 /*# sourceMappingURL=style.css.map */
