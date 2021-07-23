@@ -1,6 +1,9 @@
 // MAIN CONTAINER
 .main {
   // background-color: red;
+  > * {
+    max-width: 1300px;
+  }
   > *:not(:first-child) {
     margin-bottom: 14rem;
   }

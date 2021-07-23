@@ -33,6 +33,12 @@ body {
   letter-spacing: 0.05rem;
   color: $white;
   background-color: $primary-dark;
+  p::selection,
+  span::selection,
+  a::selection {
+    color: $primary-dark;
+    background-color: $secondary;
+  }
 }
 
 // Links
@@ -105,6 +111,11 @@ p {
     > .icon-arrow-right {
       transform: translateX(4px);
     }
+  }
+
+  & > span::selection {
+    color: $primary-light;
+    background-color: $white;
   }
 }
 
@@ -188,7 +199,7 @@ p {
 // Visibility
 .hide-for-mobile {
   @include breakpoints-down(medium) {
-    display: none;
+    display: none !important;
   }
 }
 .hide-for-desktop {
